@@ -4,7 +4,7 @@ Library for mapping public API models to internal data entities including search
 
 ## Overview ##
 
-  * Easyily bridge Models to Entities via DbContext
+  * Easily bridge Models to Entities via DbContext or other sources
   * Standard interfaces for 
       * Find using primary key
       * Search via predicates
