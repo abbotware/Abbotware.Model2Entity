@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <Company>Abbotware, LLC</Company>
+    <Authors>Anthony Abate</Authors>
+    <Product>Abbotware</Product>
+	<SolutionFile>Abbotware.Model2Entity.sln</SolutionFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	
+	<Description>Abbotware Model2Entity Libraries</Description>
+    <Copyright>Copyright © Abbotware, LLC 2020</Copyright>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/abbotware/model2entity</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/abbotware/model2entity</PackageProjectUrl>
+  </PropertyGroup>
+
+
+</Project>

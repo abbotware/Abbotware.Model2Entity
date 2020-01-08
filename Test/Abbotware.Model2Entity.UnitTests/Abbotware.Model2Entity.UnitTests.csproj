@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
+    <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Abbotware.Utility.UnitTest.Using.NUnit" Version="4.0.38" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Abbotware.Model2Entity\Abbotware.Model2Entity.csproj" />
+    <ProjectReference Include="..\..\Using\Abbotware.Model2Entity.Using.Castle\Abbotware.Model2Entity.Using.Castle.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ISearchableWithMetadata{TModel,TParameter}.cs" />
+    <Compile Remove="ModelSetAdapter{TModel,TEntity,TParameter}.cs" />
+    <Compile Remove="Prototype\Configuration\IModelSetConfiguration{TEntity,TParameter}.cs" />
+    <Compile Remove="Prototype\Configuration\Models\ModelSetConfiguration{TEntity,TParameter}.cs" />
+    <Compile Remove="Prototype\IModelSetWithParameterFactory.cs" />
+    <Compile Remove="Prototype\IModelSet{TModel,TParameter}.cs" />
+    <Compile Remove="Prototype\ISearchableWithMetadata{TModel,TParameter}.cs" />
+    <Compile Remove="Prototype\ModelSetAdapter{TModel,TEntity,TParameter}.cs" />
+    <Compile Remove="Prototype\Plugins\EmptyModelSet{TModel,TMeta}.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Prototype\Configuration\IModelSetConfiguration{TEntity,TParameter}.cs" />
+    <None Include="Prototype\Configuration\Models\ModelSetConfiguration{TEntity,TParameter}.cs" />
+    <None Include="Prototype\IModelSetWithParameterFactory.cs" />
+    <None Include="Prototype\IModelSet{TModel,TParameter}.cs" />
+    <None Include="Prototype\ISearchableWithMetadata{TModel,TParameter}.cs" />
+    <None Include="Prototype\ModelSetAdapter{TModel,TEntity,TParameter}.cs" />
+    <None Include="Prototype\Plugins\EmptyModelSet{TModel,TMeta}.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Abbotware.Interop.EntityFramework" Version="4.0.38" />
+    <PackageReference Include="Abbotware.Interop.AutoMapper" Version="4.0.38" />
+    <PackageReference Include="System.Linq.Async" Version="4.0.0" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abbotware.Model2Entity", "Common\Abbotware.Model2Entity\Abbotware.Model2Entity.csproj", "{4FFFB3BC-550D-4E13-B4B7-07CAFA399634}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{1EBAF07A-284D-4251-AE01-A96D7A7C933B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Using", "Using", "{0651093F-D2C2-4263-9875-419E48859193}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abbotware.Model2Entity.Using.Castle", "Using\Abbotware.Model2Entity.Using.Castle\Abbotware.Model2Entity.Using.Castle.csproj", "{27D89645-72CC-4A59-B650-9343754EF2DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{1210BD43-12C9-4F32-B4EF-CF2B75F23E65}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abbotware.Model2Entity.UnitTests", "Test\Abbotware.Model2Entity.UnitTests\Abbotware.Model2Entity.UnitTests.csproj", "{8BEE87E9-DF2A-4AF1-B9EA-EC63B80A39EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FFFB3BC-550D-4E13-B4B7-07CAFA399634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FFFB3BC-550D-4E13-B4B7-07CAFA399634}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FFFB3BC-550D-4E13-B4B7-07CAFA399634}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FFFB3BC-550D-4E13-B4B7-07CAFA399634}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27D89645-72CC-4A59-B650-9343754EF2DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27D89645-72CC-4A59-B650-9343754EF2DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27D89645-72CC-4A59-B650-9343754EF2DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27D89645-72CC-4A59-B650-9343754EF2DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BEE87E9-DF2A-4AF1-B9EA-EC63B80A39EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BEE87E9-DF2A-4AF1-B9EA-EC63B80A39EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BEE87E9-DF2A-4AF1-B9EA-EC63B80A39EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BEE87E9-DF2A-4AF1-B9EA-EC63B80A39EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4FFFB3BC-550D-4E13-B4B7-07CAFA399634} = {1EBAF07A-284D-4251-AE01-A96D7A7C933B}
+		{27D89645-72CC-4A59-B650-9343754EF2DF} = {0651093F-D2C2-4263-9875-419E48859193}
+		{8BEE87E9-DF2A-4AF1-B9EA-EC63B80A39EE} = {1210BD43-12C9-4F32-B4EF-CF2B75F23E65}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {076B7416-7A63-4868-A46C-5865DE0B08A9}
+	EndGlobalSection
+EndGlobal

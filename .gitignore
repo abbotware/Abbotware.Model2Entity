@@ -1,0 +1,6 @@
+*.suo
+*.user
+obj
+bin
+.vs
+_Target
