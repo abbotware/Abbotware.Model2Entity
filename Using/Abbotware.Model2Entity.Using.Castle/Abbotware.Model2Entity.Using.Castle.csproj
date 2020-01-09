@@ -5,8 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Abbotware.Interop.AutoMapper" Version="4.0.38" />
-    <PackageReference Include="Abbotware.Interop.EntityFramework" Version="4.0.38" />
     <PackageReference Include="Abbotware.Using.Castle" Version="4.0.38" />
   </ItemGroup>
 

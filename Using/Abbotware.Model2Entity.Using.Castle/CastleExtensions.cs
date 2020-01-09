@@ -7,16 +7,10 @@ namespace Abbotware.Using.Castle
 {
     using System;
     using Abbotware.Core;
-    using Abbotware.Core.Data.Configuration;
-    using Abbotware.Data.Using.Castle.Fluent;
-    using Abbotware.Data.Using.Castle.Fluent.Implementation;
-    using Abbotware.Interop.AutoMapper;
-    using Abbotware.Interop.EntityFramework;
     using Abbotware.Model2Entity;
     using Abbotware.Model2Entity.Adapters;
     using Abbotware.Model2Entity.Configuration;
     using Abbotware.Model2Entity.Configuration.Models;
-    using AutoMapper;
     using global::Castle.Facilities.TypedFactory;
     using global::Castle.MicroKernel.Registration;
     using global::Castle.Windsor;
@@ -28,17 +22,6 @@ namespace Abbotware.Using.Castle
     public static class CastleExtensions
     {
         /// <summary>
-        /// Adds and configures entity framework features
-        /// </summary>
-        /// <param name="container">container</param>
-        public static void AddEntityFrameworkSupport(this IWindsorContainer container)
-        {
-            container = Arguments.EnsureNotNull(container, nameof(container));
-
-            container.Register(Component.For<IDbContextFactory>().AsFactory());
-        }
-
-        /// <summary>
         /// Adds and configures Model2Entity / ModelSet features
         /// </summary>
         /// <param name="container">container</param>
@@ -47,40 +30,6 @@ namespace Abbotware.Using.Castle
             container = Arguments.EnsureNotNull(container, nameof(container));
 
             container.Register(Component.For<IModelSetFactory>().AsFactory());
-        }
-
-        /// <summary>
-        /// Creates and registers a mapper with the provided profile
-        /// </summary>
-        /// <typeparam name="TProfile">mapping profile</typeparam>
-        /// <param name="container">container</param>
-        /// <param name="useExpressionMapper">flag to indicate expression mapper support</param>
-        public static void AddAutoMapper<TProfile>(this IWindsorContainer container, bool useExpressionMapper = false)
-            where TProfile : Profile, new()
-        {
-            container = Arguments.EnsureNotNull(container, nameof(container));
-
-            var mapper = AutoMapperHelper.Create<TProfile>(useExpressionMapper);
-
-            container.Register(Component.For<IMapper>().Instance(mapper));
-        }
-
-        /// <summary>
-        /// Creates and registers a mapper with the provided profile by resolving the profile's dependency's from the container
-        /// </summary>
-        /// <typeparam name="TProfile">mapping profile</typeparam>
-        /// <param name="container">container</param>
-        /// <param name="useExpressionMapper">flag to indicate expression mapper support</param>
-        public static void AddAutoMapperUsingResolve<TProfile>(this IWindsorContainer container, bool useExpressionMapper = false)
-            where TProfile : Profile
-        {
-            container = Arguments.EnsureNotNull(container, nameof(container));
-
-            var profile = container.RegisterAndResolve<TProfile>();
-
-            var mapper = AutoMapperHelper.Create(useExpressionMapper, profile);
-
-            container.Register(Component.For<IMapper>().Instance(mapper));
         }
 
         /// <summary>
@@ -231,41 +180,6 @@ namespace Abbotware.Using.Castle
             }
 
             container.Register(component);
-        }
-
-        /// <summary>
-        /// Adds and configures a DbContext to the configure
-        /// </summary>
-        /// <typeparam name="TContext">context type</typeparam>
-        /// <param name="container">container</param>
-        /// <returns>Add Context</returns>
-        public static IAddDbContext<TContext> AddDbContext<TContext>(this IWindsorContainer container)
-            where TContext : DbContext
-        {
-            Arguments.NotNull(container, nameof(container));
-
-            return new AddDbContext<TContext>(container);
-        }
-
-        /// <summary>
-        /// Registers an Abbotware BaseContext
-        /// </summary>
-        /// <typeparam name="TContext">context type</typeparam>
-        /// <param name="container">container</param>
-        /// <param name="options">connection configuration</param>
-        /// <param name="adapter">options adapter</param>
-        public static void RegisterDbContext<TContext>(this IWindsorContainer container, ISqlConnectionOptions options, IDbContextOptionsAdapter<TContext> adapter)
-            where TContext : DbContext
-        {
-            container = Arguments.EnsureNotNull(container, nameof(container));
-            adapter = Arguments.EnsureNotNull(adapter, nameof(adapter));
-
-            Arguments.NotNull(options, nameof(options));
-
-            container.Register(Component.For<TContext>()
-                .ImplementedBy<TContext>()
-                .LifestyleTransient()
-                .DependsOn(Dependency.OnValue<DbContextOptions<TContext>>(adapter.Convert(options))));
         }
     }
 }
