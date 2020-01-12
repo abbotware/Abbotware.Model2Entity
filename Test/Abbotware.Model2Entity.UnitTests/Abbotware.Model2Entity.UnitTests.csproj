@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Abbotware.Utility.UnitTest.Using.NUnit" Version="4.0.39" />
+    <PackageReference Include="Abbotware.Utility.UnitTest.Using.NUnit" Version="4.0.53" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.16.0">
       <PrivateAssets>all</PrivateAssets>
