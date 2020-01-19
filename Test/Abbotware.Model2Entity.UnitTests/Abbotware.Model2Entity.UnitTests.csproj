@@ -6,9 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Abbotware.Utility.UnitTest.Using.NUnit" Version="4.0.53" />
+    <PackageReference Include="Abbotware.Data.Using.Castle" Version="4.0.79" />
+    <PackageReference Include="Abbotware.Utility.UnitTest.Using.EntityFramework" Version="4.0.79" />
+    <PackageReference Include="Abbotware.Utility.UnitTest.Using.NUnit" Version="4.0.77" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.16.0">
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
