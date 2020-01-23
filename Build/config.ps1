@@ -20,5 +20,4 @@ $Projects        = @{"Abbotware.Model2Entity.Nugets" = @{
 
 					}
 
-$CodeCoverageExcludeAssemblies = "-Abbotware.Cleanup;-Abbotware.Contrib.Roslyn;-Abbotware.Unknown"
-$NugetPublishUrl = "https://www.nuget.org"					
+$CodeCoverageExcludeAssemblies = "-Abbotware.Cleanup;-Abbotware.Contrib.Roslyn;-Abbotware.Unknown"	
