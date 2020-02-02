@@ -17,7 +17,4 @@ $Projects        = @{"Abbotware.Model2Entity.Nugets" = @{
 						Framework      = "netcoreapp3.1";
 						Configuration  = "Release"
 						} 
-
 					}
-
-$CodeCoverageExcludeAssemblies = "-Abbotware.Cleanup;-Abbotware.Contrib.Roslyn;-Abbotware.Unknown"	
