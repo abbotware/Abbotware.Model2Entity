@@ -16,6 +16,6 @@ namespace Abbotware.Model2Entity.Configuration.Models
     public class DbSetConfiguration<TEntity> : IDbSetConfiguration<TEntity>
     {
         /// <inheritdoc/>
-        public Func<IQueryable<TEntity>, IQueryable<TEntity>> IncludesQuery { get; set; }
+        public Func<IQueryable<TEntity>, IQueryable<TEntity>> PreQuery { get; set; }
     }
 }

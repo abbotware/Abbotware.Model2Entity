@@ -106,9 +106,9 @@ namespace Abbotware.Model2Entity.Adapters
             var query = this.context.Value.Set<TEntity>()
                 .AsNoTracking();
 
-            if (this.Configuration.IncludesQuery != null)
+            if (this.Configuration.PreQuery != null)
             {
-                query = this.Configuration.IncludesQuery(query);
+                query = this.Configuration.PreQuery(query);
             }
 
             return query;

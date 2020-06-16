@@ -16,8 +16,8 @@ namespace Abbotware.Model2Entity.Configuration
     public interface IDbSetConfiguration<TEntity>
     {
         /// <summary>
-        /// Gets the include query
+        /// Gets the pre query
         /// </summary>
-        Func<IQueryable<TEntity>, IQueryable<TEntity>> IncludesQuery { get; }
+        Func<IQueryable<TEntity>, IQueryable<TEntity>> PreQuery { get; }
     }
 }
