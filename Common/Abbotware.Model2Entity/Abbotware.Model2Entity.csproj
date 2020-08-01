@@ -27,8 +27,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Abbotware.Interop.EntityFramework" Version="4.0.118" />
-    <PackageReference Include="Abbotware.Interop.AutoMapper" Version="4.0.118" />
+    <PackageReference Include="Abbotware.Interop.EntityFramework" Version="4.0.171" />
+    <PackageReference Include="Abbotware.Interop.AutoMapper" Version="4.0.171" />
     <PackageReference Include="System.Linq.Async" Version="4.1.1" />
   </ItemGroup>
 
