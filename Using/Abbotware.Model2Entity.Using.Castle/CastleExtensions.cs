@@ -42,7 +42,7 @@ namespace Abbotware.Using.Castle
         public static void AddModelSetAdapter<TModel, TEntity>(this IWindsorContainer container, Action<ModelSetConfiguration<TEntity>> configCallback = null)
             where TEntity : class
         {
-            Arguments.NotNull(container, nameof(container));
+            container = Arguments.EnsureNotNull(container, nameof(container));
 
             var component = Component.For<ISearchableModelSet<TModel>>()
                 .ImplementedBy<ModelSetAdapter<TModel, TEntity>>()
@@ -72,7 +72,7 @@ namespace Abbotware.Using.Castle
             where TEntity : class
             where TKey : IEquatable<TKey>, IComparable<TKey>, IComparable
         {
-            Arguments.NotNull(container, nameof(container));
+            container = Arguments.EnsureNotNull(container, nameof(container));
 
             var component = Component.For<IFindable<TModel, TKey>>()
                 .ImplementedBy<Findable<TModel, TEntity, TKey>>()
@@ -102,7 +102,7 @@ namespace Abbotware.Using.Castle
             where TEntity : class
             where TKey : IEquatable<TKey>, IComparable<TKey>, IComparable
         {
-            Arguments.NotNull(container, nameof(container));
+            container = Arguments.EnsureNotNull(container, nameof(container));
 
             var component = Component.For<IRelatedFindable<TModel, TKey>>()
                 .ImplementedBy<RelatedFindable<TModel, TEntity, TKey>>()
@@ -132,7 +132,7 @@ namespace Abbotware.Using.Castle
             where TEntity : class
             where TContext : DbContext
         {
-            Arguments.NotNull(container, nameof(container));
+            container = Arguments.EnsureNotNull(container, nameof(container));
 
             var component = Component.For<ISearchableModelSet<TModel>>()
                 .ImplementedBy<DbSetAdapter<TModel, TEntity, TContext>>()
@@ -164,7 +164,7 @@ namespace Abbotware.Using.Castle
             where TKey : IEquatable<TKey>, IComparable<TKey>, IComparable
             where TContext : DbContext
         {
-            Arguments.NotNull(container, nameof(container));
+            container = Arguments.EnsureNotNull(container, nameof(container));
 
             var component = Component.For<ISearchableModelSet<TModel, TKey>, ISearchableModelSet<TModel>>()
                 .ImplementedBy<DbSetAdapterSimpleKey<TModel, TEntity, TKey, TContext>>()
