@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net6</TargetFrameworks>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,9 +27,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Abbotware.Interop.EntityFramework" Version="4.0.171" />
-    <PackageReference Include="Abbotware.Interop.AutoMapper" Version="4.0.171" />
-    <PackageReference Include="System.Linq.Async" Version="4.1.1" />
+    <PackageReference Include="Abbotware.Interop.EntityFramework" Version="4.0.264" />
+    <PackageReference Include="Abbotware.Interop.AutoMapper" Version="4.0.264" />
+    <PackageReference Include="System.Linq.Async" Version="5.1.0" />
   </ItemGroup>
 
 </Project>

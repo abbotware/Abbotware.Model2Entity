@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net6</TargetFrameworks>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Abbotware.Using.Castle" Version="4.0.171" />
+    <PackageReference Include="Abbotware.Using.Castle" Version="4.0.264" />
   </ItemGroup>
 
   <ItemGroup>

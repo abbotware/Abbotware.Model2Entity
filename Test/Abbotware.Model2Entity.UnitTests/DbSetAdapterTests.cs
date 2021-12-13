@@ -66,13 +66,13 @@ namespace Abbotware.Model2Entity.UnitTests
             }
 
             {
-                var w = await ms.WhereAsync(x => x.SomeEnum == SomeEnum.Basic, default);
+                var w = await ms.WhereAsync(x => x.SomeEnum == SomeEnumType.Basic, default);
                 Assert.IsNotNull(w);
                 Assert.AreEqual(3, w.Count());
             }
 
             {
-                var w = await ms.WhereAsync(x => x.SomeEnum == SomeEnum.Unknown, default);
+                var w = await ms.WhereAsync(x => x.SomeEnum == SomeEnumType.Unknown, default);
                 Assert.IsNotNull(w);
                 Assert.AreEqual(0, w.Count());
             }
@@ -84,12 +84,12 @@ namespace Abbotware.Model2Entity.UnitTests
 
             public string SomeName { get; set; }
 
-            public override SomeEnum SomeEnum => SomeEnum.Basic;
+            public override SomeEnumType SomeEnum => SomeEnumType.Basic;
         }
 
         public abstract class BaseClass
         {
-            public abstract SomeEnum SomeEnum { get; }
+            public abstract SomeEnumType SomeEnum { get; }
         }
 
         public class DataProfile : Profile

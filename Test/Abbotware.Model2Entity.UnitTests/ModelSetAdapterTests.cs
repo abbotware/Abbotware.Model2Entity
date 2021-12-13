@@ -49,7 +49,7 @@ namespace Abbotware.Model2Entity.UnitTests
             }
 
             {
-                var w = await ms.WhereAsync(x => x.SomeEnum == SomeEnum.Basic, default);
+                var w = await ms.WhereAsync(x => x.SomeEnum == SomeEnumType.Basic, default);
                 Assert.IsNotNull(w);
                 Assert.IsTrue(w.Any());
             }
@@ -86,7 +86,7 @@ namespace Abbotware.Model2Entity.UnitTests
 
             public string SomeName { get; set; }
 
-            public SomeEnum SomeEnum { get; set; }
+            public SomeEnumType SomeEnum { get; set; }
         }
 
         public class DataProfile : Profile
